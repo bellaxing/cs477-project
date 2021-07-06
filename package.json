@@ -1,0 +1,22 @@
+{
+  "name": "cs477-project",
+  "version": "1.0.0",
+  "description": "1. README doc: \r   1. List all members in your group with info: student names, ID, github account\r   2. Status Report about your group project\r   3. List each member’s tasks\r 2. Source code or github link for your project repository",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ashe-Gebre/cs477-project.git"
+  },
+  "author": "Team C",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ashe-Gebre/cs477-project/issues"
+  },
+  "homepage": "https://github.com/Ashe-Gebre/cs477-project#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
