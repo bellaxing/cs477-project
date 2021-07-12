@@ -14,6 +14,7 @@ class User {
     login() {
         return getDb().collection('users').findOne({ userName: this.userName, password: this.password });
     }
+
     save() {
         return getDb().collection("users").insertOne(this);
     }
@@ -43,10 +44,12 @@ class User {
                 },
             });
     }
+
     static deleteById(id) {
         return getDb()
             .collection("users")
             .deleteOne({ _id: new ObjectID(id) });
     }
+
 }
 module.exports = User;
