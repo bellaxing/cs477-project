@@ -12,5 +12,10 @@ class Bank{
         this.csv=csv;
         this.balance=balance;
     }
-    
+    static verifyBank(lastName,cardNumber,csv){
+        // console.log("verify banks")
+        return getDb()
+        .collection("banks")
+        .findOne({lastName:lastName,cardNumber:cardNumber,csv:csv});
+      }
 }
