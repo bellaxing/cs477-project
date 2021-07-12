@@ -34,6 +34,7 @@ exports.delete= async (req,res,next)=>{
      //let orderedItem= [orderHistory] 
        console.log(orderHistory)
       res.status(200).json({ordered:orderHistory})
+      
     }
     
   }catch(err){
