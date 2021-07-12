@@ -12,7 +12,6 @@ exports.save = async (req, res, next) => {
   } catch (err) {
     next(err)
   }
-
 }
 exports.getById = async (req, res, next) => {
   try {
@@ -23,6 +22,17 @@ exports.getById = async (req, res, next) => {
   }
 
 }
+exports.update = async (req, res, next) => {
+  try {
+    const id = req.params.id;
+    const book = req.body;
+    const updateBook = new Book(id, book.title, book.ISBN, book.publishDate, book.author, book.price);
+    await updateBook.update()
+    res.status(200).json(updateBook)
+  } catch (err) {
+    next(err)
+  }
+}
 exports.delete = async (req, res, next) => {
   try {
     await Book.deleteById(req.params.id)
@@ -31,3 +41,5 @@ exports.delete = async (req, res, next) => {
     next(err)
   }
 }
+
+

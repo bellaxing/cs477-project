@@ -21,5 +21,20 @@ module.exports = class Book {
             .collection("books")
             .findOne({ _id: new ObjectID(id) });
     }
-             
-};
+    update() {
+        return getDb().collection("books").updateOne(
+            { _id: new ObjectID(this._id) },
+            {
+                $set: {
+                    title: this.title,
+                    ISBN: this.ISBN,
+                    publishDate: this.publishDate,
+                    author: this.author
+                },
+            }
+        );
+    }
+    static deleteById(id) {
+        return getDb().collection("books").deleteOne({ _id: new ObjectID(id) });
+    }
+}
