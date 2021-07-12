@@ -22,6 +22,7 @@ module.exports = class Book {
             .findOne({ _id: new ObjectID(id) });
     }
     update() {
+
         return getDb().collection("books").updateOne(
             { _id: new ObjectID(this._id) },
             {
