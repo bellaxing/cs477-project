@@ -18,7 +18,6 @@ class Cart{
         return getDb().collection("carts").find().toArray();
       } 
       
-  
     static findByUserName(userName) {
         return getDb()
           .collection("carts")
