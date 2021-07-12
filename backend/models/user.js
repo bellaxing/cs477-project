@@ -44,10 +44,12 @@ class User {
                 },
             });
     }
+
     static deleteById(id) {
         return getDb()
             .collection("users")
             .deleteOne({ _id: new ObjectID(id) });
     }
+
 }
 module.exports = User;
