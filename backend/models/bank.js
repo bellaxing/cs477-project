@@ -12,10 +12,40 @@ class Bank{
         this.csv=csv;
         this.balance=balance;
     }
-    static verifyBank(lastName,cardNumber,csv){
-        // console.log("verify banks")
-        return getDb()
-        .collection("banks")
-        .findOne({lastName:lastName,cardNumber:cardNumber,csv:csv});
-      }
+  static verifyBank(lastName,cardNumber,csv){
+    // console.log("verify banks")
+    return getDb()
+    .collection("banks")
+    .findOne({lastName:lastName,cardNumber:cardNumber,csv:csv});
+  }
+  static checkCardNumber(cardNumber){
+    return getDb()
+    .collection("banks")
+    .findOne({cardNumber:cardNumber}); 
+  }
+  save() {
+    //console.log(this)
+    return getDb().collection("banks").insertOne(this);
+  }
+  update() {
+    return getDb()
+      .collection("banks")
+      .updateOne(
+        { _id: new ObjectID(this._id) },
+        {
+          $set: { 
+        email: this.email, 
+        SSN:this.SSN, 
+        firstName:this.firstName,
+        lastName:this.lastName,
+        cardNumber:this.cardNumber,
+        expDate: this.expDate ,
+        csv:this.csv,
+        balance:this.balance
+          },
+        }
+      );
+  }
 }
+
+module.exports=Bank;

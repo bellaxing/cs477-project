@@ -1,3 +1,4 @@
+
 const OrderHistory = require('../models/orderHist');
 exports.getAllOrderHistory= async (req,res,next)=>{
     const item= await OrderHistory.findAll();;
