@@ -20,50 +20,13 @@
     <script src="main.js"></script>
   </head>
   <body>
-    <!-- <div class="nagivation" id="navigation_page">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Team A Book store</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"><button type="button" class="btn btn-info" id="creat_new_bank_Account_id">Create new bank account</button> </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"><button type="button" class="btn btn-warning" id="update_user_information_form">Update user information</button> </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"><button type="button" class="btn btn-warning" id="view_cart_id">View cart</button> </a>
-              </li> 
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"><button type="button" class="btn btn-warning" id="order_history_id">Order history</button> </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div> -->
-
 <!-- this is menu form -->
     <div id="navigation_page">
       <div class="menu">
         <ul>
          <li><a class="navbar-brand" href="#">Book store</a> </li> 
-          <li class="active"><a href="" id="home">Home</a>
+         <li><a class="navbar-brand" href="#" id="home">Home</a> </li> 
+          <li class="active"><a href="" id="home-1">Menu</a>
               <div class="sub-menu2">
                   <ul>
                       <li class="nav-item">
@@ -101,34 +64,38 @@
 
 
     <!-- this is login form -->
-    <div class="login_form" id="login_form_id">
-      <div class="wrapper fadeInDown">
-      <div id="formContent">
-        <div class="fadeIn first">
-          <img src="./image/key.jpeg" id="icon" alt="User Icon" />
-        </div>
-        <form >
-          <div class="form_login">
-            <p>
-              <input type="text" id="user_name" class="fadeIn second" name="user_name" placeholder="user name" required>
-            </p>
-            <p>
-              <input type="password" id="password" class="fadeIn third" name="login" placeholder="password" required>
-            </p>
-            <p>
-              <input  type="button" class="btn btn-success"  value="Log In" id="login">
-            </p>
-            <div class="eror_display" id="error_div">
-              <p style="color: red;" id="wrong_message"></p>
-            </div>
+    <div class="login_style">
+      <div class="login_form" id="login_form_id">
+        <div class="wrapper fadeInDown">
+        <div id="formContent">
+          <h1 style="color:blue;text-align: center; font-style: italic; ">Welcome to books buy</h1>
+          <div class="fadeIn first">
+            <img src="./image/key.jpeg" id="icon" alt="User Icon" />
           </div>
-        </form>
-        <div id="formFooter">
-         <button type="button" class="btn btn-primary" id="create_new_account">Create new account</button>  
+          <form >
+            <div class="form_login">
+              <p>
+                <input type="text" id="user_name" class="fadeIn second" name="user_name" placeholder="user name" required>
+              </p>
+              <p>
+                <input type="password" id="password" class="fadeIn third" name="login" placeholder="password" required>
+              </p>
+              <p>
+                <input  type="button" class="btn btn-success"  value="Log In" id="login">
+              </p>
+              <div class="eror_display" id="error_div">
+                <p style="color: red;" id="wrong_message"></p>
+              </div>
+            </div>
+          </form>
+          <div id="formFooter">
+           <button type="button" class="btn btn-primary" id="create_new_account">Create new account</button>  
+          </div>
         </div>
       </div>
+      </div>
     </div>
-    </div>
+    
 
     <!-- this add book  form -->
     <div class="add_book_form" id="add_book_id">
@@ -404,7 +371,6 @@
           <tr>
               <th>Title</th>
               <th>Price</th>
-              <th>Action</th>
           </tr>
       </head>
       <tbody id="o_table_body_id">
