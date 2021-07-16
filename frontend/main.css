@@ -1,0 +1,12 @@
+.container-a{
+    margin-left: 100px;
+    display: flex;
+    flex-direction: row; 
+     flex-wrap: nowrap;
+}
+.add_book_form{
+    display: block;
+}
+.bank_account_class{
+    display: none; 
+}
